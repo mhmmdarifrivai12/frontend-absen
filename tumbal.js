@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fungsi untuk mengambil data kelas
     function loadClasses() {
-        fetch('http://absensi-app-tawny.vercel.app/api/admin/classes')
+        fetch('https://absensi-app-tawny.vercel.app/api/admin/classes')
             .then(response => response.json())
             .then(data => {
                 if (data.classes && data.classes.length > 0) {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fungsi untuk mengambil data absensi berdasarkan kelas dan tanggal
     function loadAttendance(classId, date) {
-        fetch(`http://absensi-app-tawny.vercel.app/api/public/attendance/${classId}/${date}`)
+        fetch(`https://absensi-app-tawny.vercel.app/api/public/attendance/${classId}/${date}`)
             .then(response => response.json())
             .then(data => {
                 if (data.attendance && data.attendance.length > 0) {
